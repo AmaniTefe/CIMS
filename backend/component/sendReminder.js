@@ -1,9 +1,6 @@
 import twilio from "twilio";
 
-const twilioClient = twilio(
-  "AC355399ab03efa713c60be640368cd77e",
-  "61072e2c48690b73798c81c499334b95"
-);
+const twilioClient = twilio("", "");
 
 const SendReminder = async (db, req, res) => {
   try {
@@ -21,7 +18,7 @@ const SendReminder = async (db, req, res) => {
         try {
           await twilioClient.messages.create({
             body: `This a Reminder For Your Court Appointment which is on the Date ${date} at ${time}`,
-            from: "+12512572537",
+            from: "", // Your Twilio phone number
             to: phoneNumber,
           });
           console.log(`SMS sent successfully to ${phoneNumber}`);

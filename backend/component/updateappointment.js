@@ -1,9 +1,6 @@
 import twilio from "twilio";
 
-const twilioClient = twilio(
-  "AC06500f35156c83f1a8297367f3a22f07",
-  "62969b77719f9b837311749893a6900a"
-);
+const twilioClient = twilio("", "");
 
 const UpdateAppointment = async (db, req, res) => {
   try {
@@ -46,7 +43,7 @@ const UpdateAppointment = async (db, req, res) => {
         try {
           await twilioClient.messages.create({
             body: `Your Court appointment has been updated. The New Date is ${result.date} and The New Time is ${result.time}, Note: ${result.note}`,
-            from: "+13309648109",
+            from: "", // Your Twilio phone number
             to: phoneNumber,
           });
           console.log(`SMS sent successfully to ${phoneNumber}`);
