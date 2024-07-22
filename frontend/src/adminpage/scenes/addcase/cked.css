@@ -1,0 +1,6 @@
+/* editor.css */
+.your-div-class__editor .ck-editor .ck-editor__main .ck-content {
+  background: rgb(37, 49, 61);
+  margin: 2px;
+  box-shadow: 10px;
+}

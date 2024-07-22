@@ -1,0 +1,60 @@
+/* Add your slider styles here */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+.slider-container {
+  margin: 0;
+  position: relative;
+  height: 400px; /* Set your preferred height */
+  overflow: hidden;
+  background-color: rgb(40, 148, 148);
+}
+
+.slider-image {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  transition: opacity 1s ease-in-out; /* Adjust the duration and easing function */
+}
+
+.slider-image.active {
+  opacity: 1;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.text-overlay h1 {
+  font-size: 2.5rem; /* Adjust the font size */
+  margin: 0;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+.shadow-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Adjust the color and opacity of the shadow */
+  pointer-events: none;
+}
